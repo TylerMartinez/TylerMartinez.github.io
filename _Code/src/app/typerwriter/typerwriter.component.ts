@@ -1,0 +1,62 @@
+import { Component, OnInit, Input } from '@angular/core';
+
+@Component({
+  selector: 'typerwriter',
+  templateUrl: './typerwriter.component.html',
+  styleUrls: ['./typerwriter.component.css']
+})
+export class TyperwriterComponent implements OnInit {
+  private display: string = "";
+  private pauseCount: number = 0;
+  private wordIndex: number = 0;
+
+  @Input()
+  speed: number = 200;
+
+  @Input()
+  pause: number = 5;
+
+  @Input()
+  words: string[] = ["DID YOU FOR GET TO ADD YOUR WORDS TO TYPERWRITER"];
+
+  constructor() { 
+  }
+
+  ngOnInit() {
+    setInterval(this.typer, this.speed, this);
+  }
+
+  //Methods
+  typer(context): void {
+    // Variables
+    let length = context.words[context.wordIndex].length;
+    let currentLength = context.display.length;
+    
+    // Emulate typing
+    if (context.pauseCount === context.pause && currentLength !== 0) {
+      // Emulate backspacing
+      context.display = context.display.slice(0, -1);
+    } else if (currentLength < length) {
+      
+      // Reset pause count if we deleted word
+      if(context.pauseCount === context.pause) {
+        context.pauseCount = 0;
+
+        // Move to next word
+        if(context.wordIndex === context.words.length - 1){
+          context.wordIndex = 0;
+        } else {
+          context.wordIndex++;
+        }
+      }
+
+      // Type
+      context.display += context.words[context.wordIndex][currentLength];
+
+    } else if( context.pauseCount < context.pause ) {
+      // We are pausing after finishing typing
+      context.pauseCount++;
+
+    }
+  }
+}
