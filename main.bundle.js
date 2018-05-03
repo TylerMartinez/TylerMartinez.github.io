@@ -27,7 +27,7 @@ module.exports = ""
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"caption\">\n  <span class=\"border\">TYLER MARTINEZ</span><br>\n  <div>\n    <typerwriter [speed]=\"100\" [pause]=\"20\" [words] = \"['SOFTWARE ENGINEER', 'FULL-STACK DEVELOPER', 'LOVES SAVANNAH GONZALEZ']\"></typerwriter>\n  </div>\n<div>\n\n\n"
+module.exports = "<div class=\"caption\">\n  <span class=\"border\">TYLER MARTINEZ</span><br>\n  <div>\n    <typerwriter [speed]=\"100\" [pause]=\"20\" [words] = \"['SOFTWARE ENGINEER', 'FULL-STACK DEVELOPER', 'PROBLEM SOLVER']\"></typerwriter>\n  </div>\n<div>\n\n\n"
 
 /***/ }),
 
