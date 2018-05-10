@@ -8,6 +8,10 @@ body, html {
     overflow-y: hidden;
   }
   
+  ul {
+    width: 70%;
+    margin: auto;
+}
   .bgimg-1, .bgimg-2, .bgimg-3 {
     position: relative;
     background-position: center;
@@ -38,13 +42,53 @@ body, html {
     line-height: 2;
   }
 
-  .caption2 span.spanborder {
+  .caption2 {
     color: #fff;
     padding: 12px;
     font-size: 15px;
     letter-spacing: 8px;
     line-height: 2;
     font-weight: bold;
+  }
+
+  .carousel {
+    max-width: 500px;
+    max-height: 400px;
+    margin-bottom: 15px;
+  }
+
+  .single-image{
+    margin-bottom: 15px;
+  }
+
+  .caption3{
+    color: #fff;
+    padding: 0px !important; 
+    font-size: 12px;
+    letter-spacing: 6px;
+    line-height: 2;
+    font-weight: bold;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+
+  .job-header{
+    color: #fff;
+    padding: 0px !important; 
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .job-italic {
+    color: #fff;
+    padding: 0px !important; 
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
   }
 
   .content-text {
@@ -78,19 +122,15 @@ body, html {
   }
 
   .content-container {
-    display: flex;
-    justify-content: center;
     height: 80vh;
     overflow-y: auto;
-    margin-left: 25px !important;
-    margin-right: 25px !important;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    max-width: 1200px;
     background-color:rgba(0,0,0,0.8);
     position: absolute;
-    bottom: 20;
-    top:0;
+    bottom: 1;
     left: 0;
+    right:0;
+    margin: auto;
   }
 
   .content-container::-webkit-scrollbar-track

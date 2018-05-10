@@ -9,7 +9,7 @@ export class AppComponent {
   showSplash = true;
   showAboutMe = false;
   showExperience = false;
-  showSkills = false;
+  showContact = false;
   showProjects = false;
 
   // Event Handlers
@@ -18,33 +18,32 @@ export class AppComponent {
       case 1:
         this.showAboutMe = !this.showAboutMe;
         this.showExperience = false;
-        this.showSkills = false;
+        this.showContact = false;
         this.showProjects = false;
         break;
       case 2:
         this.showAboutMe = false;
         this.showExperience = false;
-        this.showSkills = !this.showSkills;
+        this.showContact = !this.showContact;
         this.showProjects = false;
         break;
       case 3:
         this.showAboutMe = false;
         this.showExperience = !this.showExperience;
-        this.showSkills = false;
+        this.showContact = false;
         this.showProjects = false;
         break;
       case 4:
         this.showAboutMe = false;
         this.showExperience = false;
-        this.showSkills = false;
+        this.showContact = false;
         this.showProjects = !this.showProjects;
         break;
     }
 
-    if (!this.showAboutMe && !this.showExperience && !this.showSkills && !this.showProjects) {
+    if (!this.showAboutMe && !this.showExperience && !this.showContact && !this.showProjects) {
       this.showSplash = true;
-    }
-    else {
+    } else {
       this.showSplash = false;
     }
 
