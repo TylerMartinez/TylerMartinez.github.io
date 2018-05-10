@@ -46,6 +46,5 @@ export class AppComponent {
     } else {
       this.showSplash = false;
     }
-
   }
 }
