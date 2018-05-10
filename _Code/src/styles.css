@@ -80,15 +80,16 @@ body, html {
   .content-container {
     display: flex;
     justify-content: center;
-    height: 85vh;
+    height: 80vh;
     overflow-y: auto;
     margin-left: 25px !important;
     margin-right: 25px !important;
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     margin-top: 0px;
     background-color:rgba(0,0,0,0.8);
     position: absolute;
-    top: 0;
+    bottom: 20;
+    top:0;
     left: 0;
   }
 
